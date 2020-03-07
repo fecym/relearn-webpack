@@ -1,0 +1,5 @@
+@import './a.css';
+body {
+  background-color: pink;
+  background-image: url('img/card.png');
+}
