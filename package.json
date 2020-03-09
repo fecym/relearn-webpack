@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./basics/config/webpack.config-img.js",
-    "build": "rm -rf ./basics/love && webpack --config ./basics/config/webpack.config-img.js --mode production",
-    "build:dev": "rm -rf ./basics/love && webpack --config ./basics/config/webpack.config-img.js --mode development"
+    "start": "webpack-dev-server --config ./config/config/webpack.config-env.js --mode production",
+    "build": "rm -rf ./config/love && webpack --config ./config/config/webpack.config-env.js --mode production",
+    "build:dev": "rm -rf ./config/love && webpack --config ./config/config/webpack.config-env.js --mode development"
   },
   "keywords": [],
   "author": "chengyuming <yumingtarget@gmail.com> (https://github.com/cym-git)",
@@ -21,11 +21,14 @@
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-decorators": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
     "export-loader": "^1.0.52",
     "expose-loader": "^0.7.5",
+    "express": "^4.17.1",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
@@ -37,11 +40,14 @@
     "url-loader": "^3.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "@babel/runtime": "^7.8.7",
+    "bootstrap": "^4.4.1",
     "jquery": "^3.4.1"
   }
 }
