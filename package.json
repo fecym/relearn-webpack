@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./config/config/webpack.config-env.js --mode production",
-    "build": "rm -rf ./config/love && webpack --config ./config/config/webpack.config-env.js --mode production",
-    "build:dev": "rm -rf ./config/love && webpack --config ./config/config/webpack.config-env.js --mode development"
+    "start": "webpack-dev-server --config ./optimizers/config/webpack.config-lazyload.js --mode production",
+    "build": "rm -rf ./optimizers/love && webpack --config ./optimizers/config/webpack.config-lazyload.js --mode production",
+    "dll": "rm -rf ./optimizers/public/dll && webpack --config ./optimizers/config/webpack.config.dll-react.js --mode production",
+    "dll:dev": "rm -rf ./optimizers/public/dll && webpack --config ./optimizers/config/webpack.config.dll-react.js --mode development",
+    "build:dev": "rm -rf ./optimizers/love && webpack --config ./optimizers/config/webpack.config-lazyload.js --mode development"
   },
   "keywords": [],
   "author": "chengyuming <yumingtarget@gmail.com> (https://github.com/cym-git)",
@@ -18,6 +20,8 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "add-asset-html-webpack-plugin": "^3.1.3",
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-decorators": "^6.24.1",
@@ -30,6 +34,7 @@
     "expose-loader": "^0.7.5",
     "express": "^4.17.1",
     "file-loader": "^5.1.0",
+    "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
     "mini-css-extract-plugin": "^0.9.0",
@@ -48,6 +53,9 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/runtime": "^7.8.7",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   }
 }
